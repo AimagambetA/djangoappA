@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to your dashboard</h1> 
+    <p>User Name: <span>{{request.user.Uname}}</span></p>
+    <p>Your age :<span>{{request.user.age}}</span></p>
+    <p>Your country :<span>{{request.user.country}}</span></p>
+    <p>Youre Company: <span>{{request.user.company_name}}</span></p> 
+    <p>Are you staff :<span>{{request.user.is_staff}}</span></p>
+    <p>Are you admin :<span>{{request.user.is_admin}}</span></p>
+    <p>Are you superuser :<span>{{request.user.is_superuser}}</span></p>
+    <a href="{%url 'logout'%}">Log Out</a></p>
+
+</body>
+</html>

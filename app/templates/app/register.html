@@ -1,0 +1,27 @@
+{%extends 'app/base.html'%}
+{%load static%}
+
+
+{%block content%}
+<body>
+    <div class="container my-5">
+        <div class="form-container">
+        <form action="" method="POST">
+            {%csrf_token %}
+            {{register_form}}
+
+        <p>
+            {% for error in register_form.errors %}
+                <p style="color: red;">{{error}}</p>
+            {%endfor%}
+            
+            
+        </p>
+          <div class="mp-4">
+            <button type="submit">create Account</button>
+        </div>
+        </form>
+    </div>
+</div>
+</body>
+{%endblock content%}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<body>
+    <div>
+        <form action="" method="POST">
+            {%csrf_token %}
+           <span>{{login_form.email.label}}</span> 
+           <p>{{login_form.email}}</p> 
+           <span>{{login_form.password.label}}</span>
+           <p>{{login_form.password}}</p> 
+
+
+   
+              
+            {%if login_form.non_field_errors%}
+                {%for err in login_form.non_field_errors%}
+                    <p style="color: red;">{{err}}</p>
+                {%endfor%}
+            {%endif%}
+            <button type="submit">Log in</button>
+            <button><a href="http://127.0.0.1:8000/">Back</a></button>
+        </form>
+        
+    </div>
+</body>
+</html>

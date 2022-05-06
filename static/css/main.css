@@ -1,0 +1,21 @@
+form{
+    padding: 20x;
+}
+input[type="text"],
+input[type="email"],
+input[type="Uname"],
+input[type="password"]
+{
+    width: 100%;
+    outline: none;
+    border: 0;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+label{
+font-weight: 700;
+}
+.sbtn{
+    padding: 10px 25px;
+    font-weight: 700;
+}
